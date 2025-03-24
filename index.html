@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Insurance Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .remove-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>XYZ Insurance Company</h1>
+</header>
+
+<div class="container">
+    <h2>Add Client</h2>
+    <form id="clientForm">
+        <label for="name">Client Name:</label>
+        <input type="text" id="name" placeholder="Enter client's name" required>
+
+        <label for="policy">Choose Policy:</label>
+        <select id="policy" required>
+            <option value="Policy A">Policy A</option>
+            <option value="Policy B">Policy B</option>
+            <option value="Policy C">Policy C</option>
+            <option value="Policy D">Policy D</option>
+            <option value="Policy E">Policy E</option>
+        </select>
+
+        <label for="nominee">Nominee:</label>
+        <input type="text" id="nominee" placeholder="Enter nominee name" required>
+
+        <button type="submit">Add Client</button>
+    </form>
+
+    <h2>Queue of Clients</h2>
+    <table id="clientTable">
+        <thead>
+            <tr>
+                <th>Client Name</th>
+                <th>Policy</th>
+                <th>Start Date</th>
+                <th>Maturity Date</th>
+                <th>Nominee</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Clients will be dynamically added here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
